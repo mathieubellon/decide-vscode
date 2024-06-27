@@ -3,6 +3,10 @@
   "displayName": "decide-vscode",
   "description": "Decide what to do next",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mathieubellon/decide-vscode"
+  },
   "engines": {
     "vscode": "^1.90.0"
   },
