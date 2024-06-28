@@ -9,7 +9,22 @@ export function activate({ subscriptions }: vscode.ExtensionContext) {
 	const myCommandId = 'sample.showSelectionCount';
 	subscriptions.push(vscode.commands.registerCommand(myCommandId, () => {
 		const n = getNumberOfSelectedLines(vscode.window.activeTextEditor);
-		vscode.window.showInformationMessage(`Yeah, ${n} line(s) selected... Keep going!`);
+		// vscode.window.showInformationMessage(`Yeah, ${n} line(s) selected... Keep going!`);
+		vscode.window.showQuickPick(['Status: secrets found', 'Declare as False positive', 'Remediation messages']).then((selected) => {
+			vscode.window.showInformationMessage(`You selected: ${selected}`);
+		});
+		// vscode.window.showTextDocument(vscode.Uri.parse('untitled:cool')).then((editor) => {
+		// 	editor.edit((editBuilder) => {
+		// 		editBuilder.insert(new vscode.Position(0, 0), 'Hello, World!');
+		// 	});
+		// });
+		// vscode.window.showInputBox({
+		// 	value: 'Hello',
+		// 	valueSelection: [2, 4],
+		// 	placeHolder: 'Enter your name'
+		// }).then((value) => {
+		// 	vscode.window.showInformationMessage(`You entered: ${value}`);
+		// });
 	}));
 
 	// create a new status bar item that we can now manage

@@ -52,8 +52,20 @@
       {
         "command": "decide-vscode.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "decide-vscode.helloWorld",
+        "title": "Decide: Declare as false positive"
       }
-    ]
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "decide-vscode.helloWorld",
+          "when": "editorHasSelection"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "yarn run package",
