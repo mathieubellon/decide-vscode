@@ -3,7 +3,7 @@
   "displayName": "decide-vscode",
   "description": "Decide what to do next",
   "publisher": "Decide",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "icon": "images/icon.png",
   "repository": {
     "type": "git",
@@ -18,6 +18,29 @@
   "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "decide-vscode",
+          "title": "Decide VScode",
+          "icon": "./images/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "decide-vscode": [
+        {
+          "id": "home",
+          "name": "Decide for VScode"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "home",
+        "contents": " 🛠️ Installation \n "
+      }
+    ],
     "commands": [
       {
         "command": "decide-vscode.helloWorld",
