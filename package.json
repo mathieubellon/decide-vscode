@@ -1,9 +1,9 @@
 {
   "name": "decide-vscode",
-  "displayName": "decide-vscode",
+  "displayName": "Decide",
   "description": "Decide what to do next",
   "publisher": "Decide",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "icon": "images/icon.png",
   "repository": {
     "type": "git",
