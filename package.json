@@ -9,17 +9,20 @@
     "color": "#FFD703",
     "theme": "dark"
   },
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/mathieubellon/decide-vscode"
   },
   "engines": {
-    "vscode": "^1.90.0"
+    "vscode": "^1.73.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "viewsContainers": {
